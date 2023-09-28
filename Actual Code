@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int leap(int lyear){
-    int leap;
     if (lyear%400==0||lyear%4==0 && lyear%100!=0){
-        leap=1;
+        return(1);
     }
     else{
-        leap=0;
+        return(0);
     }
 }
 
@@ -14,7 +13,7 @@ int main(void) {
     int month, day, year, dif, doy;
     
     printf("Enter the date \n");
-    scanf("%d, %d, %d", &month, &day, &year);
+    scanf("%d %d %d", &month, &day, &year);
     //Gets Date
     
     int x=leap(year);
