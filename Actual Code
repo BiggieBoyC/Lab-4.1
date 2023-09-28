@@ -23,7 +23,7 @@ int main(void) {
     
     if (x==1){
         dif==29;
-        //DIF=Days in February
+        //dif=days in february
     }
     else{
         dif==28;
@@ -32,6 +32,7 @@ int main(void) {
     
     if (month==1){
         int doy=day;
+        //doy=day of year
         printf ("%d/%d/%d is the %dth day of %d",month,day,year, doy, year);
     }
     return (0);
