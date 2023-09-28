@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int leap(int lyear){
+    int leap;
+    if (lyear%400==0||lyear%4==0 && lyear%100!=0){
+        leap=1;
+    }
+    else{
+        leap=0;
+    }
+}
+
+int main(void) {
+    int month, day, year, dif, doy;
+    
+    printf("Enter the date \n");
+    scanf("%d, %d, %d", &month, &day, &year);
+    //Gets Date
+    
+    int x=leap(year);
+    printf ("%d",x);
+    //Leap Year
+    
+    if (x==1){
+        dif==29;
+        //DIF=Days in February
+    }
+    else{
+        dif==28;
+    }
+    //Figuring out february
+    
+    if (month==1){
+        int doy=day;
+        printf ("%d/%d/%d is the %dth day of %d",month,day,year, doy, year);
+    }
+    return (0);
+}
