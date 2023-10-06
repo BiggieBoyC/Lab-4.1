@@ -2,7 +2,7 @@
 
 int leap(int lyear){ 
 //    int leap; 
-    if (lyear%400==0 && lyear%4==0 && lyear%100!=0){ 
+    if (lyear%400==0 || lyear%4==0 && lyear%100!=0){ 
         return 1; 
     } 
     else{ 
@@ -21,13 +21,13 @@ int main(void) {
     int x=leap(year); 
    //Leap Year 
         if (x==1){ 
-            dif==29;
-            printf("%d",x);
+            dif=29;
+            printf("%d is a leap year \n%d \n",year,x);
         //dif=days in february 
     } 
         if (x==0){ 
-            dif==28;
-            printf("%d",x);
+            dif=28;
+            printf("%d is not a leap year \n%d \n",year,x);
     } 
 
     //Figuring out february 
@@ -47,7 +47,7 @@ int main(void) {
                 printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
             }
             if (doy%10!=3 && doy%10!=2 && doy%10!=1){
-                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
         } 
         break;
         case 2:
@@ -63,7 +63,7 @@ int main(void) {
                 printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
             }
             if (doy%10!=3 && doy%10!=2 && doy%10!=1){
-                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
             } 
             break;
         case 3:
@@ -79,7 +79,151 @@ int main(void) {
                 printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
             }
             if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 4:
+            doy=day+(31*2)+dif;
+            //doy=day of year
+            if (doy%10==1){
+                printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
                 printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+        } 
+        break;
+        case 5:
+            doy=day+(31*2)+dif+30; 
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 6:
+            doy=day+(31*3)+dif+30;  
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 7:
+            doy=day+(31*3)+dif+(30*2);
+            //doy=day of year
+            if (doy%10==1){
+                printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+        } 
+        break;
+        case 8:
+            doy=day+(31*4)+dif+(30*2); 
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 9:
+            doy=day+(31*5)+dif+(30*2); 
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 10:
+            doy=day+(31*5)+dif+(30*3); 
+            //doy=day of year
+            if (doy%10==1){
+                printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+        } 
+        break;
+        case 11:
+            doy=day+(31*6)+dif+(30*3);  
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
+            } 
+            break;
+        case 12:
+            doy=day+(31*6)+dif+(30*4);  
+            //doy=day of year
+            if (doy%10==1){
+            printf("%d/%d/%d is the %dst day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==2){
+                printf("%d/%d/%d is the %dnd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10==3){
+                printf("%d/%d/%d is the %drd day of %d \n",month,day,year, doy, year );
+            }
+            if (doy%10!=3 && doy%10!=2 && doy%10!=1){
+                printf("%d/%d/%d is the %dth day of %d \n",month,day,year, doy, year );
             } 
             break;
     }
